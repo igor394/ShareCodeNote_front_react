@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Create from './components/Create';
+import Create from './components/Create_OOP';
 import Main from './components/Main';
 import About from './components/About';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Note from './components/Note';
+import Note from './components/Note_OOP';
 import Error from './components/Error';
 
 
