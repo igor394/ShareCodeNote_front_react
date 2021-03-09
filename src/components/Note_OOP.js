@@ -1,61 +1,72 @@
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
-import env from '../env.json';
+// import env from '../env.json';
 
-function Note() {
 
-    //     let { noteURL } = useParams();
-    //     const [noteTxt, setNoteTxt] = useState('');
-    //     const [line, setLine] = useState('hide');
-    //     const [formClass, setFormClass] = useState('hide');
-    //     const [errClass, setErrClass] = useState('hide');
+class Note extends React.Component {
+    render() {
 
-    //     useEffect(() => {
-    //         if (noteURL !== undefined) {
-    //             fetch(env.urlBackend, {
-    //                 method: 'POST',
-    //                 headers: {
-    //                     'Content-Type': 'application/x-www-form-urlencoded',
-    //                 },
-    //                 body: JSON.stringify({
-    //                     'url': noteURL
-    //                 })
-    //             })
-    //                 .then(response => response.json())
-    //                 .then(response => {
-    //                     if (response.result) {
-    //                         setNoteTxt(response.note);
-    //                         setLine('');
-    //                         setFormClass('hide');
-    //                         setErrClass('hide');
-    //                     } else if (!response.result) {
-    //                         setLine('hide');
-    //                         setFormClass('hide');
-    //                         setErrClass('');
-    //                     }
-    //                 })
-    //         } else {
-    //             setLine('hide');
-    //             setFormClass('');
-    //             setErrClass('hide');
-    //         }
-    //     }, [noteURL]);
+        return (
+            <div className="container content-pad">
 
-    //     const getNote = event => {
-    //         event.preventDefault();
-    //         let url = event.target.elements.url.value;
-    //         url = url.trim();
-    //         if (url === '') {
-    //             alert('Fill in the fields');
-    //             return false;
-    //         }
-    //         noteURL = url;
-    //         window.location.href = env.url + '/' + url;
-    //     }
+            </div>
+        )
+    }
+}
 
-    return (
-    //         <div className="container content-pad">
-    //             <div className={formClass}>
+export default Note;
+
+// function Note() {
+
+//     let { noteURL } = useParams();
+//     const [noteTxt, setNoteTxt] = useState('');
+//     const [line, setLine] = useState('hide');
+//     const [formClass, setFormClass] = useState('hide');
+//     const [errClass, setErrClass] = useState('hide');
+
+//     useEffect(() => {
+//         if (noteURL !== undefined) {
+//             fetch(env.urlBackend, {
+//                 method: 'POST',
+//                 headers: {
+//                     'Content-Type': 'application/x-www-form-urlencoded',
+//                 },
+//                 body: JSON.stringify({
+//                     'url': noteURL
+//                 })
+//             })
+//                 .then(response => response.json())
+//                 .then(response => {
+//                     if (response.result) {
+//                         setNoteTxt(response.note);
+//                         setLine('');
+//                         setFormClass('hide');
+//                         setErrClass('hide');
+//                     } else if (!response.result) {
+//                         setLine('hide');
+//                         setFormClass('hide');
+//                         setErrClass('');
+//                     }
+//                 })
+//         } else {
+//             setLine('hide');
+//             setFormClass('');
+//             setErrClass('hide');
+//         }
+//     }, [noteURL]);
+
+//     const getNote = event => {
+//         event.preventDefault();
+//         let url = event.target.elements.url.value;
+//         url = url.trim();
+//         if (url === '') {
+//             alert('Fill in the fields');
+//             return false;
+//         }
+//         noteURL = url;
+//         window.location.href = env.url + '/' + url;
+
+  //             <div className={formClass}>
     //                 <form onSubmit={getNote}>
     //                     <div className="mb-3">
     //                         <label htmlFor="url">Enter you hash text</label>
@@ -100,8 +111,3 @@ function Note() {
     //                     </button>
     //                 </div>
     //             </div>
-    //         </div>
-        );
-}
-
-export default Note;
