@@ -1,0 +1,47 @@
+body {
+    height: 100%;
+
+}
+.main{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 440px;
+}
+.icon-color {
+    color: #915f8c;
+}
+a.icon-color {
+    padding-right: 20px;
+    text-decoration: none;
+}
+a.icon-color:hover {
+    color: white;
+}
+.content-pad {
+    padding: 25px;
+    padding-top: 75px;
+}
+.text-pad {
+    padding: 25px;
+}
+p {
+    text-indent: 15px;
+}
+li {
+    list-style-type: none;
+}
+.footer{
+    margin-top: auto;
+    height: 60px;
+}
+h6 {
+    margin-bottom: 0;
+    color: #999;
+    padding-top: 2px;
+}
+.hide {
+    display: none;
+}
+
