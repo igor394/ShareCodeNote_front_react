@@ -11,18 +11,18 @@ class Create extends React.Component {
         }
     }
 
-    loadDataForm=(event)=>{
+    loadDataForm = (event) => {
         event.preventDefault();
         let note = event.target.elements.note.value;
         note = note.trim();
-        if (note === ''){
+        if (note === '') {
             alert('Please, fill the field!');
             return false;
         } else {
             this.sendData(note);
         }
     }
-    sendData=(note)=>{
+    sendData = (note) => {
         this.setState({
             formClass: 'hide',
             lineClass: ''
@@ -33,9 +33,9 @@ class Create extends React.Component {
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
             body: JSON.stringify({note: note})
         })
-            .then(res=>res.json())
-            .then(res=>{
-                if(res.result) this.setState({url: env.url + '/' + res.url});
+            .then(res => res.json())
+            .then(res => {
+                if (res.result) this.setState({url: env.url + '/' + res.url});
             })
     }
 
@@ -47,8 +47,9 @@ class Create extends React.Component {
                         <label className="form-label">Enter you text</label>
                     </div>
                     <div className="mb-3">
-                            <textarea className="form-control" name="note" id="note" defaultValue="Test coded note"
-                                      maxLength="500"></textarea>
+                        <textarea className="form-control" name="note" id="note"
+                                  placeholder="Enter any characters you would like to encode"
+                                  maxLength="500"></textarea>
                     </div>
                     <div className="mb-3">
                         <p><b>Attention!</b> Note length is limited to a maximum value - 1000 characters.</p>
