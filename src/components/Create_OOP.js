@@ -75,34 +75,3 @@ class Create extends React.Component {
 export default Create;
 
 
-
-//     const sendData = note => {
-//         setLine('');
-//         setFormClass('hide');
-
-//         fetch(env.urlBackend, {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/x-www-form-urlencoded',
-//             },
-//             body: JSON.stringify({ "note": note })
-//         })
-//             .then(response => response.json())
-//             .then(response => {
-//                 if (response.result) {
-//                     setUrl(env.url + '/' + response.url);
-//                 }
-//             })
-//     }
-
-//     const loadDataFromForm = event => {
-//         event.preventDefault();
-//         let note = event.target.elements.note.value;
-//         note = note.trim();
-//         if (note === '') {
-//             alert('Fill in the fields');
-//             return false;
-//         }
-//         sendData(note);
-//     }
-
